@@ -10,9 +10,10 @@ import com.qualcomm.robotcore.hardware.DcMotorEx;
 
 @Autonomous
 public class DCMotorTest extends LinearOpMode {
-    DcMotorEx frontRight = hardwareMap.get(DcMotorEx.class,"frontRight");
+     public DcMotorEx frontRight;
     @Override
     public void runOpMode() throws InterruptedException {
+        frontRight = hardwareMap.get(DcMotorEx.class,"frontRight");
         waitForStart();
         while(opModeIsActive()){
             frontRight.setPower(0.5);
